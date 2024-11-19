@@ -10,9 +10,14 @@ body {
 }
 
 .header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
 }
 
 .top-bar {
@@ -20,6 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    margin-top: 0; 
 }
 
 #logo{
@@ -120,6 +126,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    padding-top: 120px;
 }
 
 .content-section {
@@ -136,7 +143,7 @@ body {
     max-width: 600px;
 }
 
-h1 {
+.h1-home {
 width: 722px;
 height: 287px;
 font-weight: 400px;
@@ -153,7 +160,7 @@ flex-grow: 0;
     font-weight: bold;
 }
 
-p {
+.p-home {
 width: 498px;
 height: 87px;
 font-family: 'Open Sans';
