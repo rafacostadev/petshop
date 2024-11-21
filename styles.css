@@ -305,8 +305,8 @@ flex-grow: 0;
 }
 
 .testimg img{
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
 }
 
@@ -328,4 +328,28 @@ flex-grow: 0;
 
 .produtosGato{
     list-style-type: none;
+}
+
+.grid li{
+display: grid;
+gap: 20px;
+}
+
+/* Seção do formulário */
+
+.form{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items:center;
+}
+
+.teste-form{
+    width: 400px;
+    height: 200px;
 }
