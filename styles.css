@@ -9,6 +9,10 @@ body {
     background-color: #f9f9f9;
 }
 
+img{
+    max-width: 100%;
+}
+
 .header {
     position: fixed; 
     top: 0;
@@ -270,4 +274,58 @@ flex-grow: 0;
 .plan-button:hover {
     background-color: #0D0C22;
     color: #f9f9f9;
+}
+
+/* Seção para cachorros */  
+
+#para-cachorros{
+    padding: 50px;
+
+}
+
+#para-cachorros h2{
+    text-align:center;
+    font-size: 30px;
+}
+
+
+#para-cachorros h3{
+    text-align:center;
+}
+
+.produtosCachorro{
+    list-style-type: none;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 80px;
+    gap: 120px;
+}
+
+.testimg img{
+    width: 230px;
+    height: 230px;
+    border-radius: 100%;
+}
+
+/* Seção para gatos */
+
+#para-gatos{
+    padding: 50px;
+
+}
+
+#para-gatos h2{
+    text-align:center;
+    font-size: 30px;
+}
+
+#para-gatos h3{
+    text-align:center;
+}
+
+.produtosGato{
+    list-style-type: none;
 }
