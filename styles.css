@@ -353,3 +353,116 @@ gap: 20px;
     width: 400px;
     height: 200px;
 }
+
+/* Seção do rodapé */
+footer {
+    background-color: #EDE8E8; /* Fundo claro */
+    color: #333; 
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ddd;
+  }
+  .foot {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .logo {
+   
+width: 100px;
+height: 46px;
+display: flex;
+align-items: center;
+
+}
+
+.footer-top{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+gap: 80px;
+
+margin: 0 auto;
+width: 1085px;
+height: 46px;
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.redes-sociais{
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 18px;
+
+margin: 0 auto;
+width: 35px;
+
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+
+.menu-footer a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+ }
+
+ .menu-footer a:hover {
+    text-decoration: underline;
+    color: #e69500;
+  }
+
+  .contato{
+    margin-left: 200px;
+
+  }
+  
+  .contact-button {
+    display: inline-block;
+    background-color: #ffb400; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 0;
+   
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .contact-info {
+    margin: 15px 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+
+  .footer-bottom{
+display: flex;
+flex-direction: row;
+
+padding: 0px;
+gap: 50px;
+
+width: 786px;
+height: 28px;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin-left: 200px;
+}
+.footer-bottom a{
+
+    color:#0D0C22
+}
