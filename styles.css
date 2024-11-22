@@ -33,7 +33,7 @@ img{
 }
 
 #logo{
-   position: absolute; width: 130px; height: 90px; left: 90px; top: 1px;
+    position: absolute; width: 130px; height: 90px; left: 90px; top: 1px;
 }
 
 .label-container label {
@@ -142,7 +142,6 @@ img{
     margin: 0 auto;
     gap: 20px;
 }
-
 .text-container {
     flex: 1;
     max-width: 600px;
@@ -368,21 +367,63 @@ hr {
 .form{
     display:grid;
     grid-template-columns: 1fr;
+    width: 400px;
+    height: 250px;
+    border-radius: 30px;
+    background-color: #f9f9f9;
+    
 }
+input {
+    background-color: #ffb61d;/* Cor de fundo amarela */
+    color: #333; /* Cor do texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Cor da borda */
+    width: 100%; /* Largura do input (ajusta conforme necessário) */
+    font-size: 16px; /* Tamanho da fonte */
+    border-top: 60px;
+}
+.email {
+    background-color: #ffb61d;/* Cor de fundo amarela */
+    color: #333; /* Cor do texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Cor da borda */
+    width: 100%; /* Largura do input (ajusta conforme necessário) */
+    font-size: 16px; /* Tamanho da fonte */
+    border-top: 60px;
+}
+textarea{
+    border-radius: 10px; 
+    border-bottom: 60px;
+}
+button{
+    border-radius: 10px; 
+    width: 100px;
+    height: 30px;
+   border-left: 50px;
+   border-top: 40px;
+
+
+}
+
+
 
 .form-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     align-items:center;
+    margin-bottom: 50px;
+    
    
 }
+.form-img{
+    width: 310px;
+    height: 280px;
+    padding-left: 10%;
 
-.teste-form{
-    width: 400px;
-    height: 200px;
 
 }
+
 
 /* Seção do rodapé */
 footer {
