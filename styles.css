@@ -225,6 +225,8 @@ flex-grow: 0;
     border-radius: 10px;
     text-align: left;
     height: fit-content;
+
+
 }
 
 .plans-section-h2{
@@ -334,6 +336,32 @@ flex-grow: 0;
 display: grid;
 gap: 20px;
 }
+/* Seção lista ordenada */
+
+hr {
+    border: 1px solid #717171;
+    width: 100%; 
+    margin-bottom: 50px;
+}
+
+.ordered-list{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  
+
+}
+
+
+.list{
+    text-align: left;
+    line-height: 1.9;
+    height: fit-content;
+    margin-bottom: 70px;
+    font-size: 18px;
+}
+
+
 
 /* Seção do formulário */
 
@@ -347,11 +375,13 @@ gap: 20px;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     align-items:center;
+   
 }
 
 .teste-form{
     width: 400px;
     height: 200px;
+
 }
 
 /* Seção do rodapé */
@@ -361,6 +391,8 @@ footer {
     padding: 20px 0;
     font-family: Arial, sans-serif;
     border-top: 1px solid #ddd;
+   
+
   }
   .foot {
     max-width: 1200px;
