@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,26 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="imagex/png" href="./images/logo.png">
 </head>
+
 <body>
     <header class="header">
         <div class="top-bar">
             <div class="logo">
-               <img src="images/logo.png" alt="logo petzen" id="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="logo petzen" id="logo">
+                </a>
             </div>
-                <div class="search-box">
-                    <img src="images/lupa.png" alt="lupa pesquisar" class="search-icon">
-                    <input type="text" id="search-input" placeholder="Digite o nome de um produto">
-                </div>
-             <div class="login">
-                <img src="images/carrinho.png" alt="carrinho de compras" id="carrinho">
-                <img src="images/user.png" alt="usuario" id="usuario">
+            <div class="search-box">
+                <img src="images/lupa.png" alt="lupa pesquisar" class="search-icon">
+                <input type="text" id="search-input" placeholder="Digite o nome de um produto">
+            </div>
+            <div class="login">
+                <a href="#">
+                    <img src="images/carrinho.png" alt="carrinho de compras" id="carrinho">
+                </a>
+                <a href="#">
+                    <img src="images/user.png" alt="usuario" id="usuario">
+                </a>
                 <a href="#" class="entrar">Entrar</a>
                 <a href="#" class="cadastrar">Cadastrar</a>
             </div>
@@ -43,113 +51,91 @@
                 <button class="access-button">Acessar</button>
             </div>
             <div class="image-container">
-                <img src="images/telainicial.png" alt="gato e cachorro" class="image-home"/>
+                <img src="images/telainicial.png" alt="gato e cachorro" class="image-home" />
             </div>
         </section>
 
         <section class="plans-section">
-          <h2 class="plans-section-h2">
-              Planos de Saúde para o seu pet
-          </h2>
-  
-          <div class="plans-container">
-            <div class="plan-box" id="box1">
-              <h3>Plano bronze</h3>
-  
-              <div class="containet-beneficios">
-                  <p class="containet-beneficios-p">
-                      Consultas de emergência
-                  </p>
-                  <p class="containet-beneficios-p">
-                      vacinas essenciais
-                  </p>
-                  <p class="containet-beneficios-p">
-                      Exames de rotina
-                  </p>
-                  <p class="containet-beneficios-p">
-                      Contratar
-                  </p>
-              </div>
-  
-              <span id="preco">
-                  R$ R$ 59,90/ mês
-              </span>
-              <button class="plan-button">
-                  Contratar
-              </button>
+            <h2 class="plans-section-h2">
+                Planos de Saúde para o seu pet
+            </h2>
+
+            <div class="plans-section-grid">
+
+                <div class="container-plano">
+
+                    <h3>Plano bronze</h3>
+
+                    <ul class="container-beneficios">
+                        <li class="container-beneficio">
+                            Consultas de emergência
+                        </li>
+                        <li class="container-beneficio">
+                            vacinas essenciais
+                        </li>
+                        <li class="container-beneficio">
+                            Exames de rotina
+                        </li>
+                    </ul>
+                    <span class="preco">
+                        <strong>R$ R$ 159,90/ mês</strong>
+                    </span>
+                    <button class="plan-button">
+                        Contratar
+                    </button>
+                </div>
+
+                <div class="container-plano" id="box2">
+                    <h3>Plano ouro</h3>
+                    <ul class="container-beneficios">
+
+                        <li class="container-beneficio">
+                            Consultas de emergência 24h
+                        </li>
+                        <li class="container-beneficio">
+                            vacinas essenciais + vacinas extras + vacinas personalizadas
+                        </li>
+
+                        <li class="container-beneficio">
+                            Exames de rotina + exames avançados + consultas especializadas
+                        </li>
+
+                        <li class="container-beneficio">
+                            Medicamentos, exames e tratamento com descontos amplos
+                        </li>
+
+                        <li class="container-beneficio">
+                            Internações e cirurgias
+                        </li>
+                    </ul>
+                    <span class="preco"><strong>R$ R$ 399,99/ mês</strong></span>
+                    <button class="plan-button">Contratar</button>
+                </div>
+
+                <div class="container-plano" id="box3">
+                    <h3>Plano prata</h3>
+                    <ul class="container-beneficios">
+                        <li class="container-beneficio">
+                            Consultas de emergência
+                        </li>
+                        <li class="container-beneficio">
+                            vacinas essenciais + vacinas extras
+                        </li>
+
+                        <li class="container-beneficio">
+                            Exames de rotina + exames preventivos
+                        </li>
+
+                        <li class="container-beneficio">
+                            Descontos em medicamentos e exames
+                        </li>
+
+                    </ul>
+                    <span class="preco"><strong>R$ R$ 229,99/ mês</strong></span>
+                    <button class="plan-button">Contratar</button>
+                </div>
             </div>
-  
-            <div class="plan-box" id="box2">
-              <h3>Plano ouro</h3>
-              <div class="containet-beneficios">
-              <p>
-                <p class="containet-beneficios-p">
-                     Consultas de emergência 24h 
-            </p>
-            <p class="containet-beneficios-p">
-                vacinas essenciais + 
-                </p>
-                <p class="containet-beneficios-p">
-                    Vacinas extras + vacinas </p>
-                    <p class="containet-beneficios-p">
-                        prsonalizadas
-                </p>
-                <p class="containet-beneficios-p"> 
-                    Exames de rotina +
-                </p>
-                <p class="containet-beneficios-p"> 
-                    Exames avançados +
-               </p>
-               <p class="containet-beneficios-p">
-                consultas especializadas 
-                </p>
-                <p class="containet-beneficios-p">
-                Medicamentos, exames e
-                </p>
-                <p class="containet-beneficios-p">
-                    tratamento com
-                </p>
-                <p class="containet-beneficios-p">
-                descontos amplos
-                </p>
-                <p class="containet-beneficios-p">
-                    Internação e cirurgia
-                </p>
-            </div>
-              <p><strong>R$ R$ 199,99/ mês</strong></p>
-              <button class="plan-button">Contratar</button>
-            </div>
-  
-            <div class="plan-box" id="box3">
-              <h3>Plano prata</h3>
-              <div class="containet-beneficios">
-              <p>
-                <p class="containet-beneficios-p">
-            Consultas de emergência
-                </p>
-                <p class="containet-beneficios-p">
-            vacinas essenciais +
-                </p>
-                <p class="containet-beneficios-p">
-            vacinas extras 
-                </p>
-                <p class="containet-beneficios-p">
-                Exames de rotina + 
-            </p>
-            <p class="containet-beneficios-p">
-                exames preventivos
-                </p>
-                <p class="containet-beneficios-p">
-            Descontos em
-            </p>
-            <p class="containet-beneficios-p">
-            medicamentos e exames
-              </p>
-            </div>
-              <p><strong>R$ R$ 129,99/ mês</strong></p>
-              <button class="plan-button">Contratar</button>
-            </div>
-          </div>
+
         </section>
 
         <section id="para-cachorros">
@@ -211,75 +197,82 @@
                 </li>
             </ul>
         </section>
-        <section class = "ordered-list">
-            <hr>
-            <ol class="list">
-                <li><strong>Produtos de Qualidade Premium</strong>
-                <br> Apenas itens aprovados por especialistas em saúde animal.</li>
-                <li><strong>Entrega Rápida </strong>
-                    <br> Receba no conforto da sua casa em até 24 horas. Frete grátis acima de R$250,00. </li>
-                <li><strong>Preços Competitivos </strong>
-                <br> Os melhores preços do mercado para cuidar do seu pet.
-                    Parcelamento em até 12x vezes sem juros.</li>
-                <li><strong> Garantia de Satisfação </strong>
-                <br> Troca ou devolução sem complicações. </li>
-                <li><strong>Amor pelos Animais  </strong>
-                <br> Uma empresa feita por quem entende e ama pets.</li>
-                    </ol>
-                </div>
-        </section>
-    
-        <section id="secao-formulario">
-            <h2>Formulário para contato</h2>
-            <div class="form-container">
-            <form class="form">
-                <input type="text" id="name" placeholder="Escreva seu nome">
-                <input type="email" id="email" placeholder="Escreva seu email">
-                <textarea class="mensagem" placeholder="Escreva sua mensagem"></textarea>
-                <button type="submit" form="formulario" value="submit">Enviar</button>
-            </form>
-            <img class ="form-img" src="./images/image-form.png" alt="imag form">
+        <section class="beneficios">
+            <h2>Benefícios de usar nosso site</h2>
+            <div class="flex-ordered-list">
+                <ol class="list">
+                    <li><strong>Produtos de Qualidade Premium</strong>
+                        <br> Apenas itens aprovados por especialistas em saúde animal.
+                    </li>
+                    <li><strong>Entrega Rápida </strong>
+                        <br> Receba no conforto da sua casa em até 24 horas. Frete grátis acima de R$250,00.
+                    </li>
+                    <li><strong>Preços Competitivos </strong>
+                        <br> Os melhores preços do mercado para cuidar do seu pet.
+                        Parcelamento em até 12x vezes sem juros.
+                    </li>
+                    <li><strong> Garantia de Satisfação </strong>
+                        <br> Troca ou devolução sem complicações.
+                    </li>
+                    <li><strong>Amor pelos Animais </strong>
+                        <br> Uma empresa feita por quem entende e ama pets.
+                    </li>
+                </ol>
             </div>
-            
+        </section>
+
+        <section id="secao-formulario">
+            <div class="form-container">
+                <form class="form">
+                    <h2>Formulário para contato</h2>
+                    <input type="text" id="name" placeholder="Escreva seu nome">
+                    <input type="email" id="email" placeholder="Escreva seu email">
+                    <textarea class="mensagem" placeholder="Escreva sua mensagem"></textarea>
+                    <button type="submit" class="button-submit" form="formulario" value="submit">Enviar</button>
+                </form>
+                <img class="form-img" src="./images/image-form.png" alt="imag form">
+            </div>
+
         </section>
     </main>
 
     <footer>
         <div class="footer">
-          <div class="footer-top">
-              <div class="logo">
-                 <img src="./images/logo.png" alt="logo petzen">
-              </div>
-             <nav class="menu-footer">
-             <a href="#">Cachorro</a>
-             <a href="#">Gato</a>
-             <a href="#">Peixe</a>
-             <a href="#">Coelho</a>
-             <a href="#">Pássaros</a>
-             <a href="#">Casa e Jardim</a>
-             </nav>
-             <div class="redes-sociais">
-             <img src="images/linkedin.png" alt="logo linkedin"  >
-             <img src="images/facebook.png" alt="logo facebook">
-             <img src="images/twiter.png" alt="logo twitter">
-             </div>
-           </div>
-           <div class="contato">
-             <button class="contact-button">Entre em contato:</button>
-             <div class="contact-info">
-              <p>Email: petzenWeb1@gmail.com</p>
-              <p>Phone: 73 9 9999-9999</p>
-              <p>Endereço: Maranguape I, Paulista - PE, 53441-601</p>
-             </div>
-           </div>
-          <div class="footer-bottom">
-            <p>© 2024 PETZEN. Todos os direitos reservados.</p>
-            <a href="#">Política de Privacidade</a>
-            <a href="#">Política de Cookies</a>
-          </div>
+            <div class="footer-top">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="logo petzen">
+                </div>
+                <nav class="menu-footer">
+                    <a href="#">Cachorro</a>
+                    <a href="#">Gato</a>
+                    <a href="#">Peixe</a>
+                    <a href="#">Coelho</a>
+                    <a href="#">Pássaros</a>
+                    <a href="#">Casa e Jardim</a>
+                </nav>
+                <div class="redes-sociais">
+                    <img src="images/linkedin.png" alt="logo linkedin">
+                    <img src="images/facebook.png" alt="logo facebook">
+                    <img src="images/twiter.png" alt="logo twitter">
+                </div>
+            </div>
+            <div class="contato">
+                <button class="contact-button">Entre em contato:</button>
+                <div class="contact-info">
+                    <p>Email: petzenWeb1@gmail.com</p>
+                    <p>Phone: 73 9 9999-9999</p>
+                    <p>Endereço: Maranguape I, Paulista - PE, 53441-601</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 PETZEN. Todos os direitos reservados.</p>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Política de Cookies</a>
+            </div>
         </div>
 
-     </footer>
-      
+    </footer>
+
 </body>
+
 </html>
