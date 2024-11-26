@@ -129,7 +129,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  padding-top: 120px;
+  padding-top: 135px;
 }
 
 .content-section {
@@ -181,6 +181,7 @@ img {
   padding: 20px 40px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
 .access-button:hover {
