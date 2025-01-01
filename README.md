@@ -7,7 +7,7 @@
 
 ## 📖 Descrição do Projeto
 O **PetZen** é uma página web criada como projeto para a disciplina de **Desenvolvimento Web 1**. O objetivo principal foi aplicar os conceitos aprendidos em sala de aula, para desenvolver uma página funcional, estilizada e responsiva. O tema escolhido foi uma loja virtual voltada para produtos e serviços destinados a pets, incluindo planos de saúde, alimentos e acessórios.
-Para acessar o projeto: petshop-production-5b2b.up.railway.app
+Para acessar o projeto: https://petshop-production-5b2b.up.railway.app
 
 ## 🎯 Objetivos do Projeto
 O projeto foi desenvolvido com base nos seguintes requisitos:
