@@ -1,4 +1,4 @@
-const url = "testesdeploy-production.up.railway.app/products";
+const url = "https://testesdeploy-production.up.railway.app/products";
 
 async function chamarApi(){
     const answer = await fetch(url);
