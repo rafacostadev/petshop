@@ -1,0 +1,206 @@
+/* Estilo geral para o carrinho */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+.voltar{
+    text-decoration: none;
+    color: rgb(38, 61, 189);
+}
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+thead th {
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+tbody td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+tbody td img {
+    max-width: 50px;
+    border-radius: 5px;
+}
+
+tbody td button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+tbody td button:hover {
+    background-color: #0056b3;
+}
+
+tbody td span {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+tfoot td {
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+}
+
+#clear-cart {
+    display: inline-block;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#comprar {
+    display: inline-block;
+    background-color: #2c890a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+   text-decoration: none;
+    
+}
+
+#comprar:hover {
+    background-color: #428f2d;
+}
+
+#clear-cart:hover {
+    background-color: #d32f2f;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    color: #777;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+
+/* Responsividade */
+
+
+@media (max-width: 768px) {
+    header .logo img {
+        max-width: 120px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    tbody td img {
+        max-width: 40px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    tbody td {
+        font-size: 12px;
+    }
+
+    tbody td button, #clear-cart, #comprar {
+        font-size: 10px;
+        padding: 5px 1px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo img {
+        max-width: 100px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    .voltar {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #clear-cart, #comprar {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    tbody td button {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+}
