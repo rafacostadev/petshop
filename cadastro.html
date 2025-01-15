@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetZen</title>
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="style_cadastro.css">
     <link rel="shortcut icon" type="imagex/png" href="./images/logo.png">
 </head>
 
-<body>  
+<body>
     <header class="header">
         <div class="top-bar">
             <div class="logo">
@@ -20,18 +20,23 @@
 
     </header>
     <main class="main-container">
-        <section class="section-login">
+        <section class="section-cadastro">
                 <div>
-                    <h2>Olá!</h2>
-                    <h3>Faça login na sua conta!</h3>
+                    <h2> Crie sua conta </h2>
+                
                 </div>
-                <form class="form-login">
-                    <input type="email">
-                    <input type="password">
-                    <a href="#" class="esqueci-senha">Esqueci minha senha</a>
-                    <button class="botao-login">Entrar</button>
+                <form class="form-cadastrar">
+
+                    <input type="text" id="name" placeholder="Nome completo" required>
+                    <input type="date" id="data" placeholder="Data nascimento" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="cpf" placeholder="CPF" maxlength="11" oninput="mascaraCPF(event)" required>
+                    <input type="text" id="telefone" placeholder="Telefone" oninput="mascaraTelefone(event)" required>
+                    <input type="password" id="senha" placeholder="Crie uma senha" required >
+                    <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required >
+                    <button class="botao-cadastrar">Cadastrar</button>
                 </form>
-                <h3 id="criar-conta">Não tem uma conta? <a href="./cadastro.html">Crie agora</a></h3>
+            <h3 id="login">Já tem uma conta? <a href="./login.html">Entrar</a></h3>
         </section>
     </main>
 
@@ -64,7 +69,7 @@
         </div>
 
     </footer>
-    <script src="./script/script.js"></script>
+    <script src="./script/cadastro.js"></script>
 </body>
 
 </html>
