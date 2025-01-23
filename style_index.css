@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+ul, ol{
+  list-style: none;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
@@ -271,60 +275,97 @@ img {
 }
 
 /* Seção para cachorros */
-
 #para-cachorros {
-  padding: 50px;
+  margin-top: 2rem;
 }
 
 #para-cachorros h2 {
   text-align: center;
-  font-size: 30px;
+  margin-bottom: 1.5rem;
+  color: #264653;
 }
-
-#para-cachorros h3 {
-  text-align: center;
-}
-
-.produtosCachorro {
-  list-style-type: none;
-}
-
-.grid {
+.card-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 80px;
-  gap: 120px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem; /* Espaçamento entre os cards */
+  padding: 1rem;
+  max-width: 60%; /* Limita a largura total da grade em relação à tela */
+  margin: 0 auto; /* Centraliza os cards na tela */
 }
 
-.testimg img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
+.card {
+  background-color: #fcfbfaee;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0.15, 0.15, 0, 0.15);
+  text-align: center;
+  padding: 2.0rem;
+  width: 90%; /* Reduz a largura do card em relação à coluna */
+  margin: 0 auto; 
+ /* Centraliza cada card na coluna */
 }
+
+.card img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card h3 {
+  margin: 0.5rem 0 0.4rem;
+  font-size: 0.9rem; 
+  color: #264653;
+}
+
+.card p {
+  font-size: 1.0rem; 
+  margin: 0.7rem 0;
+  color: #605f5d;
+}
+
+.card .add-to-cart {
+  background-color: #FBBC05;
+  color: rgb(246, 244, 244);
+  border: none;
+  padding: 0.6rem 0.6rem; /* Botão menor */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem; /* Texto menor no botão */
+  margin: 0.7rem
+}
+
+.card .add-to-cart:hover {
+  background-color:black;
+}
+
 
 /* Seção para gatos */
 
+
 #para-gatos {
-  padding: 50px;
+  margin-top: 2rem;
 }
 
 #para-gatos h2 {
   text-align: center;
-  font-size: 30px;
+  margin-bottom: 1.5rem;
+  color: #264653;
+}
+/* responsividade cards */ 
+@media (max-width: 768px) {
+  .card-container {
+      grid-template-columns: repeat(2, 1fr); 
+  }
 }
 
-#para-gatos h3 {
-  text-align: center;
+@media (max-width: 480px) {
+  .card-container {
+      grid-template-columns: 1fr; 
+  }
 }
 
-.produtosGato {
-  list-style-type: none;
-}
 
-.grid li {
-  display: grid;
-  gap: 20px;
-}
+
 /* Seção lista ordenada */
 
 .beneficios {
@@ -600,4 +641,38 @@ footer {
     gap: 20px;
     text-align: center;
   }
+}
+
+/* toast de adicionar produto ao carrinho */
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#toast-added {
+  background-color: #4caf50; /* Verde para sucesso */
+}
+
+#toast-exists {
+  background-color: #f44336; /* Vermelho para erro */
 }
