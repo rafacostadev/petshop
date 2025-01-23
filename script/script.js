@@ -1,4 +1,4 @@
-const productUrl = "http://localhost:8080/products"
+const productUrl = "https://petlove-backend-production.up.railway.app/products"
 const produtos = fetch(productUrl);
 
 produtos.then((r)=>{
