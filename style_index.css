@@ -355,7 +355,7 @@ img {
 /* responsividade cards */ 
 @media (max-width: 900px) {
   .card-container {
-      grid-template-columns: 2fr; 
+      grid-template-columns: 1fr; 
   }
 }
 
