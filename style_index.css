@@ -305,7 +305,8 @@ img {
 }
 
 .card img {
-  max-width: 70%;
+  max-width: 130px;
+  max-height: 130px;
   height: auto;
   border-radius: 4px;
 }
@@ -352,19 +353,11 @@ img {
   color: #264653;
 }
 /* responsividade cards */ 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .card-container {
-      grid-template-columns: repeat(2, 1fr); 
+      grid-template-columns: 2fr; 
   }
 }
-
-@media (max-width: 480px) {
-  .card-container {
-      grid-template-columns: 1fr; 
-  }
-}
-
-
 
 /* Seção lista ordenada */
 
