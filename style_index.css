@@ -352,6 +352,8 @@ img {
   margin-bottom: 1.5rem;
   color: #264653;
 }
+
+
 /* responsividade cards */ 
 @media (max-width: 900px) {
   .card-container {
@@ -495,7 +497,13 @@ footer {
 .menu-footer {
   display: flex;
   flex-wrap: wrap;
+
+  
+}.titulo-clicavel {
+  text-decoration: none; 
+
 }
+
 
 .menu-footer a {
   color: black;
