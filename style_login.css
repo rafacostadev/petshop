@@ -188,3 +188,38 @@ footer {
 .footer-bottom a {
   color: #0d0c22;
 }
+
+
+/* toast de adicionar produto ao carrinho */
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#toast-success {
+  background-color: #4caf50; /* Verde para sucesso */
+}
+
+#toast-error {
+  background-color: #f44336; /* Vermelho para erro */
+}
