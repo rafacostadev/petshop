@@ -15,7 +15,7 @@ const toastError = document.getElementById('toast-error');
 
 const login = async (username, password) => {
   const grant_type = 'password';
-  const credentials = 'Basic bXljbGllbnRpZDpteWNsaWVudHNlY3JldA=='; // Substitua por suas credenciais codificadas em Base64.
+  const credentials = 'Basic bXljbGllbnRpZDpteWNsaWVudHNlY3JldA==';
   try {
       const response = await fetch('http://localhost:8080/oauth2/token', {
           method: 'POST',
@@ -33,7 +33,7 @@ const login = async (username, password) => {
       const data = await response.json();
 
       if (data.access_token) {
-          localStorage.setItem('authToken', data.access_token); // Use access_token corretamente
+          localStorage.setItem('authToken', data.access_token);
           showToast(toastSucess)
           setTimeout(() => window.location.replace("http://127.0.0.1:5500/index.html"), 2500)
       } else {

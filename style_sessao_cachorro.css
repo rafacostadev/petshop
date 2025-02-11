@@ -321,6 +321,51 @@ footer {
     background-color: #f44336; /* Vermelho para erro */
   }
 
+  #toast-logoff {
+    background-color: #4caf50; /* Verde para sucesso */
+  }
+
+  .email-usuario{
+    position: relative;
+  }
+  
+  .dropdown-menu{
+    display: none;
+    padding: 10px 60px;
+    z-index: 1;
+    border: 2px solid #333;
+    background: #ffb61d;
+    position: absolute;
+    top: 60px;
+    right: 185px;
+  }
+  
+  .visible-menu{
+    transition: 0.3s;
+    display: block;
+    animation: show-up 0.3s forwards;
+  }
+  
+  @keyframes show-up{
+    from{
+      opacity: 0;
+      transform: translate3d(0, 30px, 0)
+    }
+    to{
+      opacity: 1;
+      transform: translate3d(0,0,0)
+    }
+  }
+  
+  .dropdown-menu li+li{
+    margin-top: 10px;
+  }
+  
+  .dropdown-menu li:hover{
+    color: white;
+    cursor: pointer;
+  }
+
 /* Responsividade */
 @media (max-width: 1000px) {
     .navbar ul {

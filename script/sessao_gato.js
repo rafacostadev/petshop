@@ -1,3 +1,5 @@
+import { jwtDecode } from "../libs/jwt-decode.js";
+
 const productUrl = "http://localhost:8080/products?category=gato"
 const produtos = fetch(productUrl);
 
@@ -33,6 +35,8 @@ produtos.then((r)=>{
 loadProducts()
 const toastAdded = document.getElementById('toast-added');
 const toastExists = document.getElementById('toast-exists');
+const toastLogoff = document.getElementById('toast-logoff');
+
 setTimeout(() => {
     const botaos = document.querySelectorAll(".add-to-cart");
     botaos.forEach(botao => {
@@ -76,4 +80,46 @@ function showToast(toastElement) {
             toastElement.classList.add('hidden');
         }, 300); // Tempo para a animação de saída
     }, 3000);
+}
+
+const token = localStorage.getItem('authToken');
+if (token) {
+    const decodedData = jwtDecode(token);
+    document.querySelector('.entrar').remove()
+    document.querySelector('.cadastrar').remove()
+    const a = document.createElement('a')
+    a.innerText = decodedData.username + " ▼"
+    a.style.textDecoration = "underline"
+    a.style.cursor = "pointer"
+    const loginSection = document.querySelector('.login')
+    a.classList.add("email-usuario")
+    loginSection.appendChild(a)
+    
+    const ul = document.createElement("ul")
+    const conta = document.createElement("li")
+    const contaLink = document.createElement("a")
+    contaLink.setAttribute("href", "./sessao_dados_usuario.html")
+    const deslogar = document.createElement("li")
+    contaLink.textContent = "Conta"
+    conta.appendChild(contaLink)
+    deslogar.textContent = "Deslogar"
+    conta.style.textDecoration = "underline"
+    deslogar.style.textDecoration = "underline"
+    ul.appendChild(conta)
+    ul.appendChild(deslogar)
+    ul.classList.add("dropdown-menu")
+    loginSection.appendChild(ul)
+
+    const dropdown = document.querySelector(".dropdown-menu")
+    const email = document.querySelector(".email-usuario")
+    email.addEventListener("click", function(){
+        dropdown.classList.toggle("visible-menu")
+    })
+
+    deslogar.addEventListener("click", function(){
+        localStorage.clear()
+        showToast(toastLogoff)
+        setTimeout(() => window.location.replace("http://127.0.0.1:5500/index.html"), 2000)
+    })
+    
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetZen</title>
-    <link rel="stylesheet" href="./style_sessao_gato.css">
+    <link rel="stylesheet" href="./style_sessao_dados_usuario.css">
     <link rel="shortcut icon" type="imagex/png" href="./images/logo.png">
 </head>
 
@@ -32,22 +32,28 @@
                 <a href="./cadastro.html" class="cadastrar">Cadastrar</a>
             </div>
         </div>
-        <nav class="navbar"  aria-label="Menu de navegação principal">
-            <ul>
-                <li><a href="./sessao_cachorro.html">Cachorro</a></li>
-                <li><a href="./sessao_gato.html">Gato</a></li>
-                <li><a href="./sessao_peixe.html">Peixe</a></li>
-                <li><a href="./sessao_coelho.html">Coelho</a></li>
-                <li><a href="./sessao_passaro.html">Passáro</a></li>
-                <li><a href="./sessao_casa.html">Casa e jardim</a></li>
-        
-        </nav>
     </header>
 
-    <section class="cat-section">
-        <h2 class="cat-section-h2">
-            Tudo para Gatos
+    <section class="dog-section">
+        <h2 class="dog-section-h2">
+            Minha conta
         </h2>
+        <div>
+            <ul class="lista_dados_usuario">
+                <form>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" disabled><br>
+                    <label for="sobrenome">Sobrenome:</label><br>
+                    <input type="text" id="sobrenome" name="sobrenome" disabled><br>
+                    <label for="cpf">CPF:</label><br>
+                    <input type="text" id="cpf" name="cpf" disabled><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" disabled><br>
+                    <label for="telefone">Telefone:</label><br>
+                    <input type="text" id="telefone" name="telefone" disabled><br>
+                  </form>
+            </ul>
+        </div>
         <ul class="card-container">
     
         </ul>
@@ -60,15 +66,12 @@
                     <img src="./images/logo.png" alt="logo petzen">
                 </div>
                 <nav class="menu-footer">
-                    
-                    <li><a href="#">Cachorro</a></li>
-                    <li><a href="#">Gato</a></li>
-                    <li><a href="#">Peixe</a></li>
-                    <li><a href="#">Coelho</a></li>
-                    <li><a href="#">Pássaros</a></li>
-                    <li><a href="#">Casa e Jardim</a></li>
-                </ul>
-    
+                    <a href="#">Cachorro</a>
+                    <a href="#">Gato</a>
+                    <a href="#">Peixe</a>
+                    <a href="#">Coelho</a>
+                    <a href="#">Pássaros</a>
+                    <a href="#">Casa e Jardim</a>
                 </nav>
                 <div class="redes-sociais">
                     <img src="images/linkedin.png" alt="logo linkedin">
@@ -93,12 +96,12 @@
                 <a href="#">Política de Cookies</a>
             </div>
         </div>
-        <div id="toast-added" class="toast hidden">Produto adicionado ao carrinho!</div> 
-        <div id="toast-exists" class="toast hidden">Este produto já está no carrinho!</div>
+        <div id="toast-success" class="toast hidden">Dados atualizados!!</div> 
+        <div id="toast-error" class="toast hidden">Erro, dados não atualizados!</div>
         <div id="toast-logoff" class="toast hidden">Deslogando!</div>   
     </footer>
 
-    <script type="module" src="./script/sessao_gato.js">
+    <script type="module" src="./script/sessao_dados_usuario.js">
   
     </script>
 </body>

@@ -1,5 +1,11 @@
 import { jwtDecode } from "../libs/jwt-decode.js";
 
+//Lógica carrinho de compras
+// Seleciona os botões e os toasts
+const botaos = document.querySelectorAll('.add-to-cart');
+const toastAdded = document.getElementById('toast-added');
+const toastExists = document.getElementById('toast-exists');
+const toastLogoff = document.getElementById('toast-logoff');
 
 const token = localStorage.getItem('authToken');
 if (token) {
@@ -16,8 +22,11 @@ if (token) {
     
     const ul = document.createElement("ul")
     const conta = document.createElement("li")
+    const contaLink = document.createElement("a")
+    contaLink.setAttribute("href", "./sessao_dados_usuario.html")
     const deslogar = document.createElement("li")
-    conta.textContent = "Conta"
+    contaLink.textContent = "Conta"
+    conta.appendChild(contaLink)
     deslogar.textContent = "Deslogar"
     conta.style.textDecoration = "underline"
     deslogar.style.textDecoration = "underline"
@@ -34,16 +43,14 @@ if (token) {
 
     deslogar.addEventListener("click", function(){
         localStorage.clear()
+        showToast(toastLogoff)
         setTimeout(() => window.location.replace("http://127.0.0.1:5500/index.html"), 2000)
     })
     
 }
 
-
 const productUrl = "http://localhost:8080/products"
 const produtos = fetch(productUrl);
-
-
 
 produtos.then((r)=>{
     return r.json()
@@ -54,6 +61,7 @@ produtos.then((r)=>{
        document.querySelector('.produtoum').setAttribute("data-name", body[0].name)
        document.querySelector('.produtoum').setAttribute("data-price", body[0].price)
        document.querySelector('.produtoum').setAttribute("data-image", body[0].imgUrl)
+       document.querySelector('.linkprodutoum').setAttribute("href", `produtos.html?id=${body[0].id}`)
 
        document.querySelector('.produto_2_img_url').setAttribute("src", body[1].imgUrl);
        document.querySelector('.produto_2_nome').innerText = body[1].name;
@@ -61,6 +69,7 @@ produtos.then((r)=>{
        document.querySelector('.produtodois').setAttribute("data-name", body[1].name)
        document.querySelector('.produtodois').setAttribute("data-price", body[1].price)
        document.querySelector('.produtodois').setAttribute("data-image", body[1].imgUrl)
+       document.querySelector('.linkprodutodois').setAttribute("href", `produtos.html?id=${body[1].id}`)
 
        document.querySelector('.produto_3_img_url').setAttribute("src", body[2].imgUrl);
        document.querySelector('.produto_3_nome').innerText = body[2].name;
@@ -68,6 +77,7 @@ produtos.then((r)=>{
        document.querySelector('.produtotres').setAttribute("data-name", body[2].name)
        document.querySelector('.produtotres').setAttribute("data-price", body[2].price)
        document.querySelector('.produtotres').setAttribute("data-image", body[2].imgUrl)
+       document.querySelector('.linkprodutotres').setAttribute("href", `produtos.html?id=${body[2].id}`)
 
        document.querySelector('.produto_4_img_url').setAttribute("src", body[3].imgUrl);
        document.querySelector('.produto_4_nome').innerText = body[3].name;
@@ -75,6 +85,7 @@ produtos.then((r)=>{
        document.querySelector('.produtoquatro').setAttribute("data-name", body[3].name)
        document.querySelector('.produtoquatro').setAttribute("data-price", body[3].price)
        document.querySelector('.produtoquatro').setAttribute("data-image", body[3].imgUrl)
+       document.querySelector('.linkprodutoquatro').setAttribute("href", `produtos.html?id=${body[3].id}`)
 
        document.querySelector('.produto_5_img_url').setAttribute("src", body[4].imgUrl);
        document.querySelector('.produto_5_nome').innerText = body[4].name;
@@ -82,6 +93,7 @@ produtos.then((r)=>{
        document.querySelector('.produtocinco').setAttribute("data-name", body[4].name)
        document.querySelector('.produtocinco').setAttribute("data-price", body[4].price)
        document.querySelector('.produtocinco').setAttribute("data-image", body[4].imgUrl)
+       document.querySelector('.linkprodutocinco').setAttribute("href", `produtos.html?id=${body[4].id}`)
 
        document.querySelector('.produto_6_img_url').setAttribute("src", body[5].imgUrl);
        document.querySelector('.produto_6_nome').innerText = body[5].name;
@@ -89,6 +101,7 @@ produtos.then((r)=>{
        document.querySelector('.produtoseis').setAttribute("data-name", body[5].name)
        document.querySelector('.produtoseis').setAttribute("data-price", body[5].price)
        document.querySelector('.produtoseis').setAttribute("data-image", body[5].imgUrl)
+       document.querySelector('.linkprodutoseis').setAttribute("href", `produtos.html?id=${body[5].id}`)
 
        document.querySelector('.produto_7_img_url').setAttribute("src", body[6].imgUrl);
        document.querySelector('.produto_7_nome').innerText = body[6].name;
@@ -96,6 +109,7 @@ produtos.then((r)=>{
        document.querySelector('.produtosete').setAttribute("data-name", body[6].name)
        document.querySelector('.produtosete').setAttribute("data-price", body[6].price)
        document.querySelector('.produtosete').setAttribute("data-image", body[6].imgUrl)
+       document.querySelector('.linkprodutosete').setAttribute("href", `produtos.html?id=${body[6].id}`)
 
        document.querySelector('.produto_8_img_url').setAttribute("src", body[7].imgUrl);
        document.querySelector('.produto_8_nome').innerText = body[7].name;
@@ -103,6 +117,7 @@ produtos.then((r)=>{
        document.querySelector('.produtooito').setAttribute("data-name", body[7].name)
        document.querySelector('.produtooito').setAttribute("data-price", body[7].price)
        document.querySelector('.produtooito').setAttribute("data-image", body[7].imgUrl)
+       document.querySelector('.linkprodutooito').setAttribute("href", `produtos.html?id=${body[7].id}`)
 
        document.querySelector('.produto_9_img_url').setAttribute("src", body[8].imgUrl);
        document.querySelector('.produto_9_nome').innerText = body[8].name;
@@ -110,6 +125,7 @@ produtos.then((r)=>{
        document.querySelector('.produtonove').setAttribute("data-name", body[8].name)
        document.querySelector('.produtonove').setAttribute("data-price", body[8].price)
        document.querySelector('.produtonove').setAttribute("data-image", body[8].imgUrl)
+       document.querySelector('.linkprodutonove').setAttribute("href", `produtos.html?id=${body[8].id}`)
 
        document.querySelector('.produto_10_img_url').setAttribute("src", body[9].imgUrl);
        document.querySelector('.produto_10_nome').innerText = body[9].name;
@@ -117,6 +133,7 @@ produtos.then((r)=>{
        document.querySelector('.produtodez').setAttribute("data-name", body[9].name)
        document.querySelector('.produtodez').setAttribute("data-price", body[9].price)
        document.querySelector('.produtodez').setAttribute("data-image", body[9].imgUrl)
+       document.querySelector('.linkprodutodez').setAttribute("href", `produtos.html?id=${body[9].id}`)
 
        document.querySelector('.produto_11_img_url').setAttribute("src", body[10].imgUrl);
        document.querySelector('.produto_11_nome').innerText = body[10].name;
@@ -124,6 +141,7 @@ produtos.then((r)=>{
        document.querySelector('.produtoonze').setAttribute("data-name", body[10].name)
        document.querySelector('.produtoonze').setAttribute("data-price", body[10].price)
        document.querySelector('.produtoonze').setAttribute("data-image", body[10].imgUrl)
+       document.querySelector('.linkprodutoonze').setAttribute("href", `produtos.html?id=${body[10].id}`)
 
        document.querySelector('.produto_12_img_url').setAttribute("src", body[11].imgUrl);
        document.querySelector('.produto_12_nome').innerText = body[11].name;
@@ -131,14 +149,8 @@ produtos.then((r)=>{
        document.querySelector('.produtodoze').setAttribute("data-name", body[11].name)
        document.querySelector('.produtodoze').setAttribute("data-price", body[11].price)
        document.querySelector('.produtodoze').setAttribute("data-image", body[11].imgUrl)
+       document.querySelector('.linkprodutodoze').setAttribute("href", `produtos.html?id=${body[11].id}`)
     })
-
-
-//Lógica carrinho de compras
- // Seleciona os botões e os toasts
- const botaos = document.querySelectorAll('.add-to-cart');
- const toastAdded = document.getElementById('toast-added');
- const toastExists = document.getElementById('toast-exists');
 
  botaos.forEach(botao => {
      botao.addEventListener('click', (event) => {

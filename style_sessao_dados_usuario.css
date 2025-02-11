@@ -131,15 +131,15 @@ img {
     color: #ffa500;
 }
 
-/* sessao peixe */
+/* sessao cachorro */
 
-.cat-section {
+.dog-section {
     padding: 80px 50px; 
     margin-top: 100px;
   
 }
 
-.cat-section-h2 {
+.dog-section-h2 {
     text-align: center;
     
 }
@@ -313,11 +313,11 @@ footer {
     transform: translateY(20px);
   }
   
-  #toast-added {
+  #toast-success {
     background-color: #4caf50; /* Verde para sucesso */
   }
   
-  #toast-exists {
+  #toast-error {
     background-color: #f44336; /* Vermelho para erro */
   }
 
@@ -365,6 +365,7 @@ footer {
     color: white;
     cursor: pointer;
   }
+
 
 /* Responsividade */
 @media (max-width: 1000px) {
@@ -460,3 +461,4 @@ footer {
         text-align: center;
     }
 }
+
