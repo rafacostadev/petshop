@@ -1,7 +1,6 @@
-import { jwtDecode } from "../libs/jwt-decode.js";
+import jwtDecode from 'jwt-decode';
 
 const productUrl = "https://petlove-backend-production.up.railway.app/products"
-
 
 //Lógica carrinho de compras
 // Seleciona os botões e os toasts
