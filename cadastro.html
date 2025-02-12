@@ -26,9 +26,8 @@
                 
                 </div>
                 <form class="form-cadastrar">
-
-                    <input type="text" id="name" placeholder="Nome completo" required>
-                    <input type="date" id="data" placeholder="Data nascimento" required>
+                    <input type="text" id="name" placeholder="Nome" required>
+                    <input type="text" id="sobrenome" placeholder="Sobrenome" required>
                     <input type="email" id="email" placeholder="Email" required>
                     <input type="text" id="cpf" placeholder="CPF" maxlength="11" oninput="mascaraCPF(event)" required>
                     <input type="text" id="telefone" placeholder="Telefone" oninput="mascaraTelefone(event)" required>
@@ -67,7 +66,8 @@
                 <a href="#">Política de Cookies</a>
             </div>
         </div>
-
+        <div id="toast-success" class="toast hidden">Cadastro realizado com sucesso, realize o login!</div> 
+        <div id="toast-error" class="toast hidden">Erro no cadastro!</div> 
     </footer>
     <script src="./script/cadastro.js"></script>
 </body>
