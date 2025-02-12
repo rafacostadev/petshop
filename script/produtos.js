@@ -48,7 +48,7 @@ const token = localStorage.getItem('authToken');
 //     })
     
 // }
-const productUrl = "http://localhost:8080/products"
+const productUrl = "https://petlove-backend-production.up.railway.app/products"
 const parametros = new URLSearchParams(window.location.search);
 const productId = parametros.get("id");
 const produto = fetch(`${productUrl}/${productId}`);

@@ -1,4 +1,4 @@
-const urlCadastro = 'http://localhost:8080/users'
+const urlCadastro = 'https://petlove-backend-production.up.railway.app/users'
 
 // mascara para o telefone e cpf aceitar apenas numero 
 

@@ -1,6 +1,6 @@
 
 
-const productUrl = "http://localhost:8080/products?category=gato"
+const productUrl = "https://petlove-backend-production.up.railway.app/products?category=gato"
 const produtos = fetch(productUrl);
 
 function loadProducts(){

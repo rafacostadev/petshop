@@ -1,5 +1,3 @@
-
-
 const productUrl = "https://petlove-backend-production.up.railway.app/products"
 
 //Lógica carrinho de compras

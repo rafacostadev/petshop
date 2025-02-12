@@ -17,7 +17,7 @@ const login = async (username, password) => {
   const grant_type = 'password';
   const credentials = 'Basic bXljbGllbnRpZDpteWNsaWVudHNlY3JldA==';
   try {
-      const response = await fetch('http://localhost:8080/oauth2/token', {
+      const response = await fetch('https://petlove-backend-production.up.railway.app/oauth2/token', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
