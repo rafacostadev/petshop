@@ -8,6 +8,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
+    "type": "module",
     "start": "node script.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
