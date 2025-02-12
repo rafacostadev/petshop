@@ -1,4 +1,4 @@
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 //Lógica carrinho de compras
 // Seleciona os botões e os toasts

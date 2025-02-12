@@ -1,4 +1,4 @@
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 const getMeUrl = "http://localhost:8080/users/me"
 const urlAtualizarUsuario = 'http://localhost:8080/users' 

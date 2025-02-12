@@ -1,4 +1,4 @@
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 const productUrl = "https://petlove-backend-production.up.railway.app/products"
 

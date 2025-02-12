@@ -1,4 +1,4 @@
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 const productUrl = "http://localhost:8080/products?category=gato"
 const produtos = fetch(productUrl);
