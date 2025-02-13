@@ -35,7 +35,7 @@ const cadastro = async (nome, sobrenome, email, cpf, telefone, senha) => {
     .then((result) => {
         if(result.status != 500){
             showToast(toastSucess)
-            setTimeout(() => window.location.replace("http://127.0.0.1:5500/login.html"), 2500)
+            setTimeout(() => window.location.replace("https://petshop-production-9d62.up.railway.app//login.html"), 2500)
         } else{
             showToast(toastError)
         }

@@ -1,7 +1,9 @@
-
-
 const productUrl = "https://petlove-backend-production.up.railway.app/products?category=cachorro"
 const produtos = fetch(productUrl);
+
+const toastAdded = document.getElementById('toast-added');
+const toastExists = document.getElementById('toast-exists');
+const toastLogoff = document.getElementById('toast-logoff');
 
 function loadProducts(){
 produtos.then((r)=>{
@@ -31,14 +33,6 @@ produtos.then((r)=>{
         })
     })  
 }
-
-loadProducts()
-//Lógica carrinho de compras
- // Seleciona os botões e os toasts
-
-const toastAdded = document.getElementById('toast-added');
-const toastExists = document.getElementById('toast-exists');
-const toastLogoff = document.getElementById('toast-logoff');
 
 setTimeout(() => {
     const botaos = document.querySelectorAll(".add-to-cart");
@@ -112,6 +106,8 @@ const token = localStorage.getItem('authToken');
 //     })
     
 // }
+
+loadProducts()
 
 function showToast(toastElement) {
     // Exibe o toast selecionado

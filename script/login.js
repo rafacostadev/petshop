@@ -35,7 +35,7 @@ const login = async (username, password) => {
       if (data.access_token) {
           localStorage.setItem('authToken', data.access_token);
           showToast(toastSucess)
-          setTimeout(() => window.location.replace("http://127.0.0.1:5500/index.html"), 2500)
+          setTimeout(() => window.location.replace("https://petshop-production-9d62.up.railway.app/index.html"), 2500)
       } else {
           showToast(toastError);
       }

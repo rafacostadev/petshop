@@ -1,7 +1,9 @@
-
-
 const productUrl = "https://petlove-backend-production.up.railway.app/products?category=gato"
 const produtos = fetch(productUrl);
+
+const toastAdded = document.getElementById('toast-added');
+const toastExists = document.getElementById('toast-exists');
+const toastLogoff = document.getElementById('toast-logoff');
 
 function loadProducts(){
 produtos.then((r)=>{
@@ -32,10 +34,6 @@ produtos.then((r)=>{
     })
 }
 
-loadProducts()
-const toastAdded = document.getElementById('toast-added');
-const toastExists = document.getElementById('toast-exists');
-const toastLogoff = document.getElementById('toast-logoff');
 
 setTimeout(() => {
     const botaos = document.querySelectorAll(".add-to-cart");
@@ -81,6 +79,8 @@ function showToast(toastElement) {
         }, 300); // Tempo para a animação de saída
     }, 3000);
 }
+
+loadProducts()
 
 const token = localStorage.getItem('authToken');
 // if (token) {

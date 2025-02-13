@@ -51,6 +51,7 @@ const token = localStorage.getItem('authToken');
 
 const produtos = fetch(productUrl);
 
+function loadProducts(){
 produtos.then((r)=>{
     return r.json()
     }).then((body)=>{
@@ -150,6 +151,9 @@ produtos.then((r)=>{
        document.querySelector('.produtodoze').setAttribute("data-image", body[11].imgUrl)
        document.querySelector('.linkprodutodoze').setAttribute("href", `produtos.html?id=${body[11].id}`)
     })
+}
+
+loadProducts()
 
  botaos.forEach(botao => {
      botao.addEventListener('click', (event) => {

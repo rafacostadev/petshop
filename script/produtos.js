@@ -1,5 +1,3 @@
-
-
 //Lógica carrinho de compras
 // Seleciona os botões e os toasts
 const botaos = document.querySelectorAll('.add-to-cart');
@@ -53,6 +51,7 @@ const parametros = new URLSearchParams(window.location.search);
 const productId = parametros.get("id");
 const produto = fetch(`${productUrl}/${productId}`);
 
+function loadProducts(){
 produto.then((r)=>{
     return r.json()
     }).then((body)=>{
@@ -65,6 +64,7 @@ produto.then((r)=>{
         botao.setAttribute("data-price", body.price)
         botao.setAttribute("data-image", body.imgUrl)
     })
+}
 
 const botao = document.querySelector('.add-to-cart');
 
@@ -93,18 +93,19 @@ botao.addEventListener('click', (event) => {
         showToast(toastAdded);
     }
 });
- 
 
- function showToast(toastElement) {
-     // Exibe o toast selecionado
-     toastElement.classList.remove('hidden');
-     toastElement.classList.add('show');
+loadProducts()
 
-     // Remove o toast após 3 segundos
-     setTimeout(() => {
-         toastElement.classList.remove('show');
-         setTimeout(() => {
-             toastElement.classList.add('hidden');
-         }, 300); // Tempo para a animação de saída
-     }, 3000);
- }
+function showToast(toastElement) {
+    // Exibe o toast selecionado
+    toastElement.classList.remove('hidden');
+    toastElement.classList.add('show');
+
+    // Remove o toast após 3 segundos
+    setTimeout(() => {
+        toastElement.classList.remove('show');
+        setTimeout(() => {
+            toastElement.classList.add('hidden');
+        }, 300); // Tempo para a animação de saída
+    }, 3000);
+}
